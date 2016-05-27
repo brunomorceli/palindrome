@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "description": "simple test",
+  "main": "",
+  "authors": [
+    "morceli <morcelimail@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6"
+  }
+}

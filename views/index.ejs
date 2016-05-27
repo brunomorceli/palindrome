@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body ng-app="app" >
+		<div ng-controller="palindromeCtrl">
+			<h1>Palindrome Validator</h1>
+			<div>
+				<h3>Type a palindrome (min 3 characters)</h3>
+				<input type="text" name="text" ng-model="palindrome"> 
+				<button ng-click="compare()" ng-show="palindrome.length >= 3">Validate</button>
+			</div>
+			<br>
+
+			<table border="1" cellspacing="0" cellpadding="0" width="50%" ng-show="historic.length > 0">
+				<thead>
+					<tr>
+						<td colspan="2" align="center">
+							Historico  
+							({{ historic.length }})
+						</td>
+						<tr>
+							<td>Texto</td>
+							<td>Valido</td>
+						</tr>
+					</tr>
+				</thead>
+				<tbody>				
+					<tr ng-repeat="registry in historic">
+						<td>{{ registry.text }}</td>
+						<td>{{ registry.result ? 'Sim' : 'Nao' }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="javascripts/app/app.js"></script>
+		<script type="text/javascript" src="javascripts/app/palindrome/palindromeController.js"></script>
+		<script type="text/javascript" src="javascripts/app/palindrome/palindromeService.js"></script>
+	</body>
+</html>
