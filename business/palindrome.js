@@ -7,9 +7,8 @@ function checkPalindrome (req) {
 		if(!word || !word.length)
 			return reject('Invalid Params.');
 
+		word = word.toLowerCase().replace(/ /g,'');
 		var reverseWord = word.split('').reverse().join('');
-
-		console.log('here:', reverseWord);
 
 		if(word != reverseWord)
 			return reject('Not Match.');
